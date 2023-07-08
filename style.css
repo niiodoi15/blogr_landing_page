@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    font-family: 'Overpass', 'Ubuntu', sans-serif;
+}
+.container{
+    padding: 0 10%;
+}
+
+
+/* mobile */
+.bg-orange{
+    background-image: url("/assets/images/bg-orange.png");
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    justify-content: center;
+    padding: 4em 10% 6em 10%;
+    border-radius: 0 0 0 7em;
+}
+.navbar {
+    /* flex: 1; */
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+    .navbar{
+        position: relative;
+    }
+    nav{
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: -2;
+        display: flex;
+        gap: 2em;
+        width: 100%;
+        background-color: black;
+    }
+    .links{
+        display: none;
+        flex-direction: column;
+        gap: 3em;
+        align-items: center;
+    }
+    /* .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    } */
+    .menu-icon{
+        display: block;
+    }
+    .orange-text{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+    .hero-header{
+        color: #FFF;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: -1.08px;
+    }
+    .hero-para{
+        color: #FFF;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .hero-btn{
+        display: flex;
+        justify-content: center;
+        gap: 0.7em;
+    }
+    .btn-white{
+        background-color: #fff;
+        color: #FF505C;
+        text-align: right;
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 2em;
+        border: none;
+        padding: 15px 17px;
+    }
+    .btn-transparent{
+        background-color: transparent;
+        color: #fff;
+        text-align: right;
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 2em;
+        border: 1px solid #fff;
+        padding: 15px 17px;
+    }
+    .design{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        padding: 7em 10%;
+    }
+    .design-content{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .design-text{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .design-image{
+        display: flex;
+        justify-content: center;
+    }
+    .design-image2{
+        display: none;
+    }
+    .design-header{
+        color: #1F3E5A;
+        text-align: center;
+        font-family: 'Overpass';
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: -0.84px;
+    }
+    .designh1{
+        color: #1F3E5A;
+        text-align: center;
+        font-family: 'Overpass';
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+    .design-paragraph{
+        color: #4C5862;
+        text-align: center;
+        font-family: 'Overpass';
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+    .halfbg{
+        display: none;
+    }
+
+    .bg-blue{
+        position: relative;
+        max-width: 100vw;
+        height: 950px;
+    }
+    .bg-phone{
+        max-width: 768px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        max-height: 792px;
+    }
+    .web-phone, .webtwophones{
+        display: none;
+    }
+    
+    .bgcontent{
+        position: absolute;
+        bottom: 25%;
+        max-width: 768px;
+        width: 100%;
+        padding: 7em 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        /* justify-content: center; */
+    }
+    .blueh1{
+        color: #FFF;
+        text-align: center;
+        font-family: 'Overpass';
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -1.2px;
+    }
+    .bluepara{
+        color: #FFF;
+        font-family: 'Overpass';
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+@media (min-width: 768px){
+    
+    nav{
+        display: block;
+    }
+    .links{
+        display: block;
+    }
+    .nav-links{
+        display: flex;
+        gap: 2em;
+    }
+    
+    .nav-links a, .nav-btn a{
+        text-decoration: none;
+        color: #FFF;
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .orange-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-header{
+        color: #FFF;
+        font-size: 64px;
+        letter-spacing: -1.92px;
+        
+    }
+    .design{
+        position: relative;
+        padding: 7em 0 7em 10%;
+        
+    }
+    .halfbg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+    }
+    .design-content{
+        display: flex;
+        flex-direction: row;
+        /* gap: 2em; */
+    }
+
+
+    .design-image{
+        display: none;
+    }
+    .design-image2{
+        display: block;
+        /* float: right; */
+    }
+    .design-header{
+        font-size: 40px;
+        letter-spacing: -1.2px;
+    }
+    .designh1{
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+    .bg-phone, .twophones{
+        display: none;
+    }
+    .web-phone{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+    .webtwophones{
+        display: block;
+    }
+    .bgcontent{
+        /* position: absolute; */
+        bottom: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        align-items: center;
+
+    }
+    .bg-blue{
+        position: relative;
+        max-width: 100vw;
+        height: 550px;
+    }
+}
