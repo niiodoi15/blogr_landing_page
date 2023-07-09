@@ -9,6 +9,45 @@
 .container{
     padding: 0 10%;
 }
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+.menu li:hover {
+  /* display: inline-block; */
+  /* background-color:#4c9e9e; */
+  transition: 0.3s ease;
+}
+
+/* .menu li + li {
+  margin-top: 12px;
+} */
+
+input[type=checkbox]:checked ~ .menu {
+  display: block;
+}
+
+.hamburger {
+  display: block;
+}
+
+.dropdown {
+  left: 0;
+  top: 30px;
+  transform: translateX(0%);
+  color: #1F3E5A;
+}
+
+.dropdown li:hover {
+  background-color: transparent;
+
+}
 
 
 /* mobile */
@@ -21,49 +60,7 @@
     padding: 4em 10% 6em 10%;
     border-radius: 0 0 0 7em;
 }
-.navbar {
-    /* flex: 1; */
-    display: flex;
-    gap: 3em;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    width: 50px;
-    cursor: pointer;
-}
-.menu-icon {
-    width: 25px;
-    cursor: pointer;
-    display: none;
-}
-    .navbar{
-        position: relative;
-    }
-    nav{
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: -2;
-        display: flex;
-        gap: 2em;
-        width: 100%;
-        background-color: black;
-    }
-    .links{
-        display: none;
-        flex-direction: column;
-        gap: 3em;
-        align-items: center;
-    }
-    /* .nav-links{
-        display: flex;
-        flex-direction: column;
-        gap: 3em;
-    } */
-    .menu-icon{
-        display: block;
-    }
+
     .orange-text{
         display: flex;
         flex-direction: column;
@@ -112,8 +109,9 @@
     .design{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 3em;
-        padding: 7em 10%;
+        padding: 30em 10%;
     }
     .design-content{
         display: flex;
@@ -160,18 +158,19 @@
     .halfbg{
         display: none;
     }
-
+    
     .bg-blue{
         position: relative;
         max-width: 100vw;
-        height: 950px;
+        height: 625px;
     }
     .bg-phone{
-        max-width: 768px;
+        max-width: 100vw;
         width: 100%;
-        position: absolute;
         bottom: 0;
-        max-height: 792px;
+        max-height: 925px;
+        text-align: center;
+        height: 629px;
     }
     .web-phone, .webtwophones{
         display: none;
@@ -179,15 +178,15 @@
     
     .bgcontent{
         position: absolute;
-        bottom: 25%;
+        bottom: 15%;
         max-width: 768px;
         width: 100%;
-        padding: 7em 10%;
+        padding: 0 10% 0 10%;
         display: flex;
         flex-direction: column;
         gap: 2em;
-        /* justify-content: center; */
     }
+    
     .blueh1{
         color: #FFF;
         text-align: center;
@@ -204,28 +203,259 @@
         line-height: 28px;
         letter-spacing: 0.5px;
     }
-@media (min-width: 768px){
-    
-    nav{
-        display: block;
-    }
-    .links{
-        display: block;
-    }
-    .nav-links{
+    .laptop{
         display: flex;
-        gap: 2em;
+        flex-direction: column;
+        gap: 1em;
     }
-    
-    .nav-links a, .nav-btn a{
+    .bg-laptop{
+        max-width: 100vw;
+        width: 100%;
+    }
+    .lap-pics{
+        display: none;
+    }
+    .laptop-content{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2em;
+        justify-content: center;
+    }
+    .lap-text{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+    .laptoph1{
+        color: #1F3E5A;
+        font-family: 'Overpass';
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+    .laptop-para{
+        color: #4C5862;
+        font-family: 'Overpass';
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .footer{
+        border-radius: 0px 100px 0px 0px;
+        background: #24242C;
+        padding: 5em 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        color: #FFF;
+    }
+    .footer-items{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        text-align: center;
+    }
+    .footer-title{
+        text-align: center;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 33px;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 0.7em;
+    }
+    .foot-links{
         text-decoration: none;
         color: #FFF;
-        font-family: Ubuntu;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 33px;
     }
+    .footer .logo{
+        height: 40px;
+    }
+
+     /* NAVBAR STYLING STARTS */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 20px; */
+  background-color: transparent;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+ .menu {
+  display:none;
+  position: absolute;
+  background-color: #fff;
+  color: #24242C;
+  right: 0;
+  left: 0;
+  text-align: center;
+  /* padding: 16px 0; */
+} 
+
+
+
+
+.menu li:hover {
+  /* background-color: #4c9e9e; */
+  border-bottom: 1px #fff solid;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li a{
+  padding: 15px 14px;
+  color: #24242C;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: #ffffff;
+  color: #1F3E5A;
+  padding: 1em 0;
+  position: absolute; 
+  left: 0;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+/* .dropdown li:hover {
+  background-color: #4c9e9e;
+} */
+
+.services:hover .dropdown {
+  display: block;
+  background-color: #fff;
+}
+
+input[type=checkbox] {
+  display: none;
+} 
+.menu-btns{
+  display: none;
+}
+
+    
+    
+    
+    @media (min-width: 815px){
+  
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    font-size: 50px;
+    user-select: none;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+
+  }
+  .menu {
+    
+    display: flex;
+    position: static;
+    gap: 200px;
+    font-size: 18px;
+    background-color: transparent;
+    justify-content: space-between;
+    /* max-width: fit-content; */
+    /* width: -webkit-fill-available; */
+    align-items: center;
+  }
+  .menu .links{
+    display: flex;
+  }
+  .links li a{
+    color: #fff;
+  }
+  .sign-btns, .websign-btns{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .btn-login{
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .btn-signup{
+    border-radius: 28px;
+    background: #FF7B86;
+    color: #fff;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 39px;
+    border: none;
+  }
+  .logo-links{
+    display: flex;
+    gap: 5em;
+  }
+  
+
+
+
+
+
+  .dropdown {
+    background-color: #ffffff;
+    color: #1F3E5A;
+    padding: 1em 0;
+    position: absolute; 
+    /* left: 0; */
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+  }
+  
+ 
+
+
     .orange-text{
         display: flex;
         flex-direction: column;
@@ -237,29 +467,25 @@
         
     }
     .design{
-        position: relative;
         padding: 7em 0 7em 10%;
         
     }
     .halfbg{
-        position: absolute;
-        top: 0;
-        right: 0;
         display: block;
     }
     .design-content{
         display: flex;
         flex-direction: row;
-        /* gap: 2em; */
     }
-
+    .design-text{
+        justify-content: center;
+    }
 
     .design-image{
         display: none;
     }
     .design-image2{
         display: block;
-        /* float: right; */
     }
     .design-header{
         font-size: 40px;
@@ -282,18 +508,55 @@
         display: block;
     }
     .bgcontent{
-        /* position: absolute; */
-        bottom: 0;
+        top: 0;
         max-width: 100%;
         display: flex;
         flex-direction: row;
         gap: 2em;
         align-items: center;
+        height: 400px;
 
     }
     .bg-blue{
-        position: relative;
-        max-width: 100vw;
-        height: 550px;
+        background-image: url("/assets/images/webblue.png");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 0 100px 0 0;
     }
-}
+    .laptop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 0 10% 0 0;
+    }
+    .bg-laptop{
+        display: none;
+    }
+    .web-laptop{
+        display: block;
+        /* top: 25%; */
+    }
+    .lap-pics{
+        display: block;
+        position: relative;
+    }
+    
+    .web-lapbg{
+        top: 0;
+        background-color: #FFF;
+    }
+    .lap-text{
+        text-align: left;
+        padding: 0;
+    }
+
+    .footer{
+        border-radius: 0px 100px 0 0;
+        background: #24242C;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10% 10%;
+    }
+
+  }
